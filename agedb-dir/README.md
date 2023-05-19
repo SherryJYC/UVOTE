@@ -22,7 +22,7 @@ python data/preprocess_agedb.py
 
 #### Main Files
 
-- `train.py`: main training and evaluation script
+- `train_gradual.py`: main training and evaluation script
 - `create_agedb.py`: create AgeDB raw meta data
 - `preprocess_agedb.py`: create AgeDB-DIR meta file `agedb.csv` with balanced val/test set
 

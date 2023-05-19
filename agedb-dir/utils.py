@@ -47,35 +47,6 @@ def measureUCE(pred, std, labels, num_bin=10, sample_threshold=1):
     uce /= len(std)
     return uce
 
-def get_power_alphas(num_branch=2, epochs=90):
-    print(f'use power alphas, {num_branch} branch for {epochs} epochs')
-    alphas = []
-    ts = np.arange(0, epochs)
-    alphas.append([1 - (t/epochs)**2 for t in ts])
-
-    power = np.linspace(0, 1, num_branch)
-
-    for p in power:
-        if p == 0:
-            continue
-        alphas.append([(t/epochs)**(p*2) for t in ts])
-    return alphas
-
-def get_gaus_alphas(num_branch=2, epochs=90):
-    t_means = np.linspace(0, epochs, num_branch)
-    t_std = epochs / 2
-    ts = np.arange(0, epochs)
-
-    print(f't_std for gaus alpha {t_std} with total epoch {epochs}')
-    
-    gaus_alphas = []
-    for t_mean in t_means:
-        dist = norm(loc=t_mean, scale=t_std)
-        prob_bins = [dist.pdf(t) for t in ts] 
-        prob_bins /= max(prob_bins)
-        gaus_alphas.append(prob_bins)
-    return gaus_alphas
-
 def set_seed(seed: int = 42) -> None:
     print('set random seed ', seed)
     np.random.seed(seed)
@@ -158,6 +129,7 @@ def prepare_folders(args):
         if not os.path.exists(folder):
             print(f"===> Creating folder: {folder}")
             os.mkdir(folder)
+
 
 def adjust_learning_rate(optimizer, epoch, args):
     lr = args.lr
