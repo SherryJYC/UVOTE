@@ -70,7 +70,6 @@ def load_tsv(data_file, max_seq_len, s1_idx=0, s2_idx=1, targ_idx=2, targ_fn=Non
             kde = KernelDensity(kernel='gaussian', bandwidth=h).fit(targs.reshape(-1, 1))
             score = kde.score_samples(targs.reshape(-1, 1)) # Compute the log-likelihood
             prob_label = np.exp(score)
-        
 
             logging.info(f"Using re-weighting: [{reweight.upper()}]")
 

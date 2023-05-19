@@ -54,8 +54,7 @@ def main(arguments):
     parser.add_argument('--batch_size', help='batch size', type=int, default=16)
     parser.add_argument('--optimizer', help='optimizer to use', type=str, default='adam')
     parser.add_argument('--lr', help='starting learning rate', type=float, default=2.5e-4)
-    parser.add_argument('--loss', type=str, default='mse', choices=['l1nll', 'l2nll', 'msenll', 
-                                                    'mse', 'l1', 'focal_l1', 'focal_mse', 'huber'])
+    parser.add_argument('--loss', type=str, default='mse', choices=['l1nll', 'mse', 'l1', 'focal_l1', 'focal_mse', 'huber'])
     parser.add_argument('--huber_beta', type=float, default=0.3, help='beta for huber loss')
     parser.add_argument('--max_grad_norm', help='max grad norm', type=float, default=5.)
     parser.add_argument('--val_interval', help='number of iterations between validation checks', type=int, default=400)
