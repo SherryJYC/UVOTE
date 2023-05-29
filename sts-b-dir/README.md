@@ -57,5 +57,5 @@ python train_morebranch.py [...evaluation model arguments...] --evaluate --eval_
 ```
 
 ## Pretrained model
-- [model for agedb](https://share.phys.ethz.ch/~pf/yujiangdata/mouv/sts-b-dir/model_state_best.th)
+- [model for sts-b](https://share.phys.ethz.ch/~pf/yujiangdata/mouv/sts-b-dir/model_state_best.th)
 
