@@ -9,7 +9,7 @@ Data imbalance is ubiquitous when applying machine learning to real-world proble
 ## Usage
 We separate the codebase for different datasets into different subfolders. Please go into the subfolders for more information (e.g., installation, dataset preparation, training, evaluation & models).
 
-[IMDB-WIKI-DIR]()  |  AgeDB-DIR  |  NYUD2-DIR  |  STS-B-DIR
+[AgeDB-DIR](https://github.com/SherryJYC/UVOTE/tree/main/agedb-dir)  |  [IMDB-WIKI-DIR](https://github.com/SherryJYC/UVOTE/tree/main/imdb-wiki-dir) | [WIND-DIR](https://github.com/SherryJYC/UVOTE/tree/main/wind-dir) |  [STS-B-DIR](https://github.com/SherryJYC/UVOTE/tree/main/sts-b-dir)
 
 
 ## Acknowledgment
