@@ -1,4 +1,5 @@
-# MOUV
+# UVOTE
+[GCPR 2024] Uncertainty Voting Ensemble for Imbalanced Deep Regression
 
 ## Acknowledgment
 The code is based on:
